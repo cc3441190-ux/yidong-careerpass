@@ -1,0 +1,180 @@
+/* CareerPass 全局动画和样式 */
+
+/* 页面切换动画 */
+@keyframes screenSlideIn {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes screenSlideOut {
+  from { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+  to { 
+    opacity: 0; 
+    transform: translateX(-20px); 
+  }
+}
+
+@keyframes screenFadeIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.98); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+/* 按钮按压动画 */
+@keyframes buttonPress {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+/* Toast通知动画 */
+@keyframes toastIn {
+  from { 
+    opacity: 0; 
+    transform: translate(-50%, -20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translate(-50%, 0); 
+  }
+}
+
+@keyframes toastOut {
+  from { 
+    opacity: 1; 
+    transform: translate(-50%, 0); 
+  }
+  to { 
+    opacity: 0; 
+    transform: translate(-50%, -20px); 
+  }
+}
+
+/* 加载旋转动画 */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* 骨架屏闪烁动画 */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* 直播状态脉冲动画 */
+@keyframes livePulse {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+    box-shadow: 0 0 4px rgba(255,77,0,0.6);
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: scale(1.3);
+    box-shadow: 0 0 8px rgba(255,77,0,0.9);
+  }
+}
+
+/* 下拉刷新旋转动画 */
+@keyframes refreshSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Logo脉冲动画 */
+@keyframes logoPulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.05); 
+    opacity: 0.8; 
+  }
+}
+
+/* 成功图标动画 */
+@keyframes successCheck {
+  from { 
+    stroke-dashoffset: 100; 
+  }
+  to { 
+    stroke-dashoffset: 0; 
+  }
+}
+
+/* 滚动条隐藏 */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* 移动端触摸优化 */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 允许输入框选择文本 */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* 按钮通用样式 */
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* 图片优化 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 安全区域适配 */
+@supports (padding: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* 像素化身辉光动画 */
+@keyframes avatarGlowPulse {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 6px rgba(255,107,53,0.4));
+  }
+  50% {
+    filter: brightness(1.1) drop-shadow(0 0 12px rgba(255,107,53,0.8));
+  }
+}
