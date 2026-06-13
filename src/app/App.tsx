@@ -35,6 +35,7 @@ import { Iphone16Frame } from "./components/iPhone16Frame";
 import type { UserCareerState } from "./store/userCareerStore";
 import { createDefaultState, applyChallengeResult } from "./store/userCareerStore";
 import { getGuestId, saveGuestState, loadGuestState } from "./utils/guestId";
+import { Analytics } from "@vercel/analytics/react";
 
 const DOT_GRID = `url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%231A1A1A' fill-opacity='0.05'/%3E%3C/svg%3E")`;
 
@@ -507,6 +508,7 @@ export default function App() {
           <ToastContainer />
         </div>
       </Iphone16Frame>
+      <Analytics />
     </div>
   );
 }
