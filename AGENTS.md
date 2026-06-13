@@ -91,3 +91,4 @@ pnpm run build
 ## 常见问题和预防
 - CORS 问题：Vite 配置了 `/api/ark` 代理到火山引擎
 - 字体：使用 IBM Plex Mono 和 PingFang SC
+- 部署超时：部署环境 30 秒超时限制，`serve` 包必须作为项目依赖安装，不能用 `npx serve`（会因下载包超时）；使用 `pnpm exec serve` 替代
